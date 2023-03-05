@@ -3,7 +3,7 @@
 #SBATCH --job-name=marlgrid_baseline
 #SBATCH --partition=long                        
 #SBATCH --cpus-per-task=2
-#SBATCH --gres=gpu:rtx8000:1
+#SBATCH --gres=gpu:a100:1
 #SBATCH --mem=65G                                     
 #SBATCH --time=24:00:00
 

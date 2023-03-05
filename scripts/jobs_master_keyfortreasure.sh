@@ -29,7 +29,7 @@ do
 						do					
 							for Seed in "${Seeds[@]}"
 							do
-								sbatch scripts/saf.sh $Env $N_agents $Method $coordination $heterogeneity $use_policy_pool $latent_kl $Seed $ProjectName $conda_env
+								sbatch scripts/training/saf.sh $Env $N_agents $Method $coordination $heterogeneity $use_policy_pool $latent_kl $Seed $ProjectName $conda_env
 							done
 						done
 					done
@@ -68,7 +68,7 @@ do
 						do					
 							for Seed in "${Seeds[@]}"
 							do
-								sbatch scripts/saf.sh $Env $N_agents $Method $coordination $heterogeneity $use_policy_pool $latent_kl $Seed $ProjectName $conda_env
+								sbatch scripts/training/saf.sh $Env $N_agents $Method $coordination $heterogeneity $use_policy_pool $latent_kl $Seed $ProjectName $conda_env
 							done
 						done
 					done
@@ -105,7 +105,7 @@ do
 				do					
 					for Seed in "${Seeds[@]}"
 					do
-						sbatch scripts/baselines.sh $Env $N_agents $Method $coordination $heterogeneity $Seed $ProjectName $conda_env
+						sbatch scripts/training/baselines.sh $Env $N_agents $Method $coordination $heterogeneity $Seed $ProjectName $conda_env
 					done
 				done			
 			done
@@ -136,7 +136,7 @@ do
 				do					
 					for Seed in "${Seeds[@]}"
 					do
-						sbatch scripts/baselines.sh $Env $N_agents $Method $coordination $heterogeneity $Seed $ProjectName $conda_env
+						sbatch scripts/training/baselines.sh $Env $N_agents $Method $coordination $heterogeneity $Seed $ProjectName $conda_env
 					done
 				done			
 			done

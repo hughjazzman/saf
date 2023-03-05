@@ -198,6 +198,8 @@ class MAPPO(nn.Module):
         out_actions = torch.stack(out_actions, dim=1)
         logprobs = torch.stack(logprobs, dim=1)
         entropies = torch.stack(entropies, dim=1)
+
+        value = self.get_value(x, state)
         
         return out_actions, logprobs, entropies, value, None
     
